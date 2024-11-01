@@ -1,7 +1,7 @@
-local EternalWare = {}
+local Luxt1 = {}
 
-function EternalWare.CreateWindow(libName, logoId)
-    local EternalWare = Instance.new("ScreenGui")
+function Luxt1.CreateWindow(libName, logoId)
+    local LuxtLib = Instance.new("ScreenGui")
     local shadow = Instance.new("ImageLabel")
     local MainFrame = Instance.new("Frame")
     local sideHeading = Instance.new("Frame")
@@ -48,10 +48,10 @@ function EternalWare.CreateWindow(libName, logoId)
     game:GetService("UserInputService").InputBegan:connect(function(current, ok) 
         if not ok then 
             if current.KeyCode.Name == oldKey then 
-                if EternalLib.Enabled == true then
-                    EternalLib.Enabled = false
+                if LuxtLib.Enabled == true then
+                    LuxtLib.Enabled = false
                 else
-                    EternalLib.Enabled = true
+                    LuxtLib.Enabled = true
                 end
             end
         end
@@ -106,13 +106,13 @@ function EternalWare.CreateWindow(libName, logoId)
     pageFolder.Parent = framesAll
 
     --
-    libName = libName or "EternalLib"
-    logoId = logoId or "91039086481029"
+    libName = libName or "LuxtLib"
+    logoId = logoId or ""
     --
 
-    EternalLib.Name = "EternalLib"..libName
-    EternalLib.Parent = game.CoreGui
-    EternalLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    LuxtLib.Name = "LuxtLib"..libName
+    LuxtLib.Parent = game.CoreGui
+    LuxtLib.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
     MainFrame.Name = "MainFrame"
     MainFrame.Parent = shadow
@@ -221,7 +221,7 @@ function EternalWare.CreateWindow(libName, logoId)
     framesAll.ZIndex = 2
 
     shadow.Name = "shadow"
-    shadow.Parent = EternalLib
+    shadow.Parent = LuxtLib
     shadow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     shadow.BackgroundTransparency = 1.000
     shadow.Position = UDim2.new(0.319562584, 0, 0.168689325, 0)
@@ -1260,4 +1260,4 @@ function EternalWare.CreateWindow(libName, logoId)
     return TabHandling
 end
 
-return EternalWare
+return Luxt1
